@@ -15,7 +15,7 @@ function App() {
   const [error, setError] = useState('');
   
   // Custom configurable GitHub link
-  const githubLink = 'https://github.com/djangobaby2015/weather-react';
+  const githubLink = 'https://github.com/kriss2012/weather-react';
 
   // Get dynamic background gradient theme based on OWM weather icon code
   const getThemeClass = (iconCode) => {
