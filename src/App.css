@@ -1,0 +1,40 @@
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  Height: auto; 
+  width:100%;
+  
+}
+
+
+.Navbar{
+  top: 0%;
+  position:absolute;
+  width: 100%;
+  mix-blend-mode: difference;
+  
+}
+.wes{
+  font-size:2.3rem;
+  font-weight: 900;
+}
+.footer{
+  position: absolute;
+  top:90%;
+  align-items: center;
+ 
+}
+.element{
+  position: absolute;
+  top:95%;
+  align-items: center;
+
+ 
+}
