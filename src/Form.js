@@ -1,23 +1,38 @@
-import React from 'react'
+import React from 'react';
 import './form.css';
-import { Input,Button,Icon ,Container, Label} from 'semantic-ui-react';
-const Form = (props) => {
-    return (
-        <Container>
+import { Icon } from 'semantic-ui-react';
 
-        <form onSubmit={props.getWeather}>
-            <h2 style={{color :'orange' }}><b>City:</b></h2>
-          <Input 
-    icon = 'search'
-    placeholder='Search...' name = 'city'
-  />
-       <br></br>    
-       <br></br>  
-            <Button color ='yellow' style={{Size:'lg'}}  icon={<Icon name='search' inverted circular link />}>search</Button>
-        </form>
-        </Container>
-    )
-   
-}
+const Form = ({ getWeather, getMyLocation }) => {
+  return (
+    <div className="search-container animate-fade-in">
+      <form onSubmit={getWeather} className="search-form">
+        <div className="search-input-wrapper">
+          <Icon name="search" className="search-icon-inside" />
+          <input
+            type="text"
+            className="search-input"
+            placeholder="Search for a city (e.g. London, Tokyo)..."
+            name="city"
+            required
+            autoComplete="off"
+          />
+        </div>
+        <div className="search-actions">
+          <button type="submit" className="search-btn">
+            <Icon name="search" /> Search
+          </button>
+          <button 
+            type="button" 
+            onClick={getMyLocation} 
+            className="location-btn"
+            title="Use current location"
+          >
+            <Icon name="map marker alternate" /> Near Me
+          </button>
+        </div>
+      </form>
+    </div>
+  );
+};
 
-export default Form; 
+export default Form;
